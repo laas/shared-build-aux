@@ -1,5 +1,10 @@
 2009-06-10  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Fix remotedir computation in SF upload script.
+	* doc/sf-upload.sh.in: Here.
+
+2009-06-10  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Fix documentation rules.
 	* doc/Makefile.am: Fix CLEANFILES variable.
 	* doc/sf-upload.sh.in: Fix permissions

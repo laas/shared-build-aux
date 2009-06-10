@@ -38,7 +38,7 @@ fi
 
 rsync_cmd="$rsync -avP -e ssh"
 localdir="@abs_top_builddir@/doc/html/"
-remotedir="htdocs/doc/core/$VERSION"
+remotedir="htdocs/doc/@PACKAGE_TARNAME@/$VERSION"
 rsync_loghost="$SF_USERNAME,roboptim@web.sourceforge.net:"
 
 echo "Fixing local rights.";
