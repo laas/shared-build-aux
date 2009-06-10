@@ -1,5 +1,10 @@
 2009-06-10  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Add roboptim-core.m4 file.
+	* build-aux/roboptim-core.m4: New.
+
+2009-06-10  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Add missing mkdir -p.
 	* doc/Makefile.am: Here.
 
