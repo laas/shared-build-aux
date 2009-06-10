@@ -1,5 +1,12 @@
 2009-06-10  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Fix documentation rules.
+	* doc/Makefile.am: Fix CLEANFILES variable.
+	* doc/sf-upload.sh.in: Fix permissions
+	before uploading documentation.
+
+2009-06-10  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Add roboptim-core.m4 file.
 	* build-aux/roboptim-core.m4: New.
 
