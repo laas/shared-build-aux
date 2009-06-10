@@ -1,5 +1,14 @@
 2009-06-10  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Add new Doxygen rules.
+	* build-aux/doxygen.m4: New.
+	* doc/Doxyfile.in: Update.
+	* doc/Makefile.am: Make rules more robust.
+	* doc/Makefile.in: New.
+	* doc/sf-upload.sh.in: Fix permissions problems.
+
+2009-06-10  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Add pkg-config rules.
 	* build-aux/pkg-config.mk: New.
 	* build-aux/pkg-config.pc.in: Use Autoconf new
