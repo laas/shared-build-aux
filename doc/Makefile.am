@@ -41,6 +41,7 @@ install-data-local: install-doxygen-html
 uninstall-local: uninstall-doxygen-html
 
 install-doxygen-html: html-local
+	$(mkdir_p) "$(DESTDIR)$(htmldir)"
 	cp -rf html "$(DESTDIR)$(htmldir)"
 	$(INSTALL_DATA) $(PACKAGE_TARNAME).doxytag "$(DESTDIR)$(htmldir)/html"
 

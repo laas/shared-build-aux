@@ -1,5 +1,10 @@
 2009-06-10  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Add missing mkdir -p.
+	* doc/Makefile.am: Here.
+
+2009-06-10  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Add new Doxygen rules.
 	* build-aux/doxygen.m4: New.
 	* doc/Doxyfile.in: Update.
