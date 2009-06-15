@@ -1,3 +1,8 @@
+2009-06-15  Thomas Moulard  <thomas.moulard@gmail.com>
+
+	Update to new constraint interface.
+	* optimization-tests/hs071.hh: New.
+
 2009-06-10  Thomas Moulard  <thomas.moulard@gmail.com>
 
 	Remove comment and fix remodir computation.
