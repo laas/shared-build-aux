@@ -1,5 +1,10 @@
 2009-06-16  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Do not use boost::make_shared.
+	* optimization-tests/hs071.hh: Here.
+
+2009-06-16  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Fix broken pkg-config.mk file.
 	* .gitignore: New.
 	* build-aux/pkg-config.mk: Fix variable names.
