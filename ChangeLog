@@ -1,3 +1,9 @@
+2009-06-16  Thomas Moulard  <thomas.moulard@gmail.com>
+
+	Fix broken pkg-config.mk file.
+	* .gitignore: New.
+	* build-aux/pkg-config.mk: Fix variable names.
+
 2009-06-15  Thomas Moulard  <thomas.moulard@gmail.com>
 
 	Update to new constraint interface.
