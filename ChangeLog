@@ -1,5 +1,10 @@
 2009-06-16  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Make initializeProblem generic.
+	* optimization-tests/hs071.hh: Here.
+
+2009-06-16  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Do not use boost::make_shared.
 	* optimization-tests/hs071.hh: Here.
 
