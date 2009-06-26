@@ -1,3 +1,8 @@
+2009-06-26  Thomas Moulard  <thomas.moulard@gmail.com>
+
+	Add titles to function.
+	* optimization-tests/hs071.hh: Here.
+
 2009-06-16  Thomas Moulard  <thomas.moulard@gmail.com>
 
 	Make initializeProblem generic.
