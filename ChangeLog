@@ -1,3 +1,42 @@
+2009-07-01  Thomas Moulard  <thomas.moulard@gmail.com>
+
+	Create new build-aux branch.
+	* autotest.at: Rename from build-aux/autotest.at.
+	* autotest.mk: Rename from build-aux/autotest.mk.
+	* boost.m4: Rename from build-aux/boost.m4.
+	* bootstrap: Rename from build-aux/bootstrap.
+	* config.guess: Rename from build-aux/config.guess.
+	* config.sub: Rename from build-aux/config.sub.
+	* deb.mk: Rename from build-aux/deb.mk.
+	* depcomp: Rename from build-aux/depcomp.
+	* doc/Doxyfile.in: Remove.
+	* doc/Makefile.am: Remove.
+	* doc/Makefile.in: Remove.
+	* doc/doxygen.css: Remove.
+	* doc/footer.html: Remove.
+	* doc/header.html: Remove.
+	* doc/package.css: Remove.
+	* doc/sf-upload.sh.in: Remove.
+	* doc/tabs.css: Remove.
+	* doxygen.m4: Rename from build-aux/doxygen.m4.
+	* ebuild.mk: Rename from build-aux/ebuild.mk.
+	* init.mk: Rename from build-aux/init.mk.
+	* install-sh: Rename from build-aux/install-sh.
+	* libtool.m4: Rename from build-aux/libtool.m4.
+	* ltmain.sh: Rename from build-aux/ltmain.sh.
+	* ltoptions.m4: Rename from build-aux/ltoptions.m4.
+	* ltsugar.m4: Rename from build-aux/ltsugar.m4.
+	* ltversion.m4: Rename from build-aux/ltversion.m4.
+	* lt~obsolete.m4: Rename from build-aux/lt~obsolete.m4.
+	* missing: Rename from build-aux/missing.
+	* move-if-change: Rename from build-aux/move-if-change.
+	* optimization-tests/hs071.hh: Remove.
+	* pkg-config.mk: Rename from build-aux/pkg-config.mk.
+	* pkg-config.pc.in: Rename from build-aux/pkg-config.pc.in.
+	* roboptim-core.m4: Rename from build-aux/roboptim-core.m4.
+	* rpm.mk: Rename from build-aux/rpm.mk.
+	* warning.m4: Rename from build-aux/warning.m4.
+
 2009-06-26  Thomas Moulard  <thomas.moulard@gmail.com>
 
 	Add titles to function.
