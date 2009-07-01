@@ -1,5 +1,11 @@
 2009-07-01  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Add Ipopt Autoconf macros.
+	* acx_pthread.m4: New.
+	* ipopt.m4: New.
+
+2009-07-01  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Create new build-aux branch.
 	* autotest.at: Rename from build-aux/autotest.at.
 	* autotest.mk: Rename from build-aux/autotest.mk.
