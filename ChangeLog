@@ -1,3 +1,9 @@
+2009-07-27  Thomas Moulard  <thomas.moulard@gmail.com>
+
+	Beautify Autotest output, capture Valgrind log.
+	* autotest.at: Display what command line has been
+	called and capture ``valgrind.log''.
+
 2009-07-01  Thomas Moulard  <thomas.moulard@gmail.com>
 
 	Add Ipopt Autoconf macros.
