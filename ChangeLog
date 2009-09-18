@@ -1,5 +1,11 @@
 2009-09-18  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Add scripts for maintainers from the GNU C library.
+	* announce-gen: New.
+	* git-version-gen: New.
+
+2009-09-18  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Add missing m4 file.
 	* pkg.m4: New.
 
