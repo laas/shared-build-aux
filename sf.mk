@@ -1,4 +1,4 @@
-#                                                                -*-Autoconf-*-
+#                                                                -*-Automake-*-
 # Copyright (C) 2009 by Thomas Moulard, AIST, CNRS, INRIA.
 # This file is part of the roboptim.
 #
@@ -22,42 +22,13 @@
 # You should have received a copy of the GNU General Public License
 # along with roboptim.  If not, see <http://www.gnu.org/licenses/>.
 
-# serial 1
-
 # ------ #
 # README #
 # ------ #
 
-# This m4 file can be used to search for Doxygen and its dependencies.
+# SourceForge related Makefile rules.
 
-m4_pattern_forbid([^JRL])
-
-# JRL_PROG_DOXYGEN([REQUIRED_VERSION])
-# --------------------------------------------
-# Search for Doxygen and related tools (perl and dot).
-AC_DEFUN([JRL_PROG_DOXYGEN],
-[# Search for Doxygen and its related tools.
-#  Search for Doxygen.
-AC_ARG_VAR([DOXYGEN], [the Doxygen documentation generation program])
-AC_CHECK_PROGS([DOXYGEN], [doxygen])
-
-
-#  Search for Perl.
-AC_ARG_VAR([PERL], [the perl interpreter])
-AC_CHECK_PROGS([PERL], [perl])
-
-if test x"$PERL" = x; then
- AC_MSG_FAILURE([Perl not found.])
-fi
-
-
-#  Search for Dot.
-AC_ARG_VAR([DOT], [the dot graphic tool])
-AC_CHECK_PROGS([DOT], [dot])
-
-if test x"$DOT" = x; then
- AC_SUBST([HAVE_DOT], [NO])
-else
- AC_SUBST([HAVE_DOT], [YES])
-fi
-]) # JRL_PROG_DOXYGEN
+# --- SourceForge upload script.
+# sf-upload.sh generation rule.
+sf-upload.sh: $(top_srcdir)/build-aux/sf-upload.sh.in
+	@$(top_builddir)/config.status --file="$@":"$<" && chmod a+x "$@"
