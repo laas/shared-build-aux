@@ -1,5 +1,11 @@
 2009-09-18  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Fix Doxygen HTML rendering.
+	* doxygen/doxygen.css: Use JRL documentation style.
+	* doxygen/footer.html: Simplify footer.
+
+2009-09-18  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Add scripts for maintainers from the GNU C library.
 	* announce-gen: New.
 	* git-version-gen: New.
