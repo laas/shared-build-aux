@@ -57,7 +57,12 @@ sed -i \
 TESTCASE=`which $1`
 echo "$at_srcdir/AT_LINE: $CHECK_PREFIX $TESTCASE"
 AT_CHECK([$CHECK_PREFIX $TESTCASE], [0], [expout], [ignore])
-AT_CAPTURE_FILE ([valgrind.log])
+
+# Capture Valgrind log if possible.
+if test -f valgrind.log; then
+ AT_CAPTURE_FILE ([valgrind.log])
+fi
+
 AT_CLEANUP
 ]) # CHECK_STDOUT
 

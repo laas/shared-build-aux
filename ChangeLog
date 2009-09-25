@@ -1,5 +1,11 @@
 2009-09-25  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Remove warning when Valgrind is not used.
+	* autotest.at: Capture Valgrind log if possible,
+	not systematically.
+
+2009-09-25  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Update version in stdout file automatically.
 	* autotest.at: Here.
 
