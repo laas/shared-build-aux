@@ -1,5 +1,11 @@
 2009-09-25  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Enable all Autotools warnings.
+	* bootstrap: Add flags to autoreconf to enable
+	additional warnings.
+
+2009-09-25  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Simplify autotest.at.
 	* autotest.at: Simplify version updating.
 
