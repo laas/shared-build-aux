@@ -1,5 +1,10 @@
 2009-09-25  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Fix path in documentation upload script.
+	* sf-upload.sh.in: Here.
+
+2009-09-25  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Autoupdate.
 	* config.guess,
 	* config.sub: Update using autoreconf.

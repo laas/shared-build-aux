@@ -37,7 +37,7 @@ if test "x$VERSION" = x; then
 fi
 
 rsync_cmd="$rsync -avP -e ssh"
-localdir="@abs_top_builddir@/doc/html/"
+localdir="@abs_top_builddir@/doc/doxygen-html/"
 pkgname=$(echo '@PACKAGE_TARNAME@' | sed 's|^roboptim-||')
 remotedir="htdocs/doc/$pkgname/$VERSION"
 rsync_loghost="$SF_USERNAME,roboptim@web.sourceforge.net:"
