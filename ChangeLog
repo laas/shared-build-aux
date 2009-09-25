@@ -1,5 +1,10 @@
 2009-09-25  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Simplify autotest.at.
+	* autotest.at: Simplify version updating.
+
+2009-09-25  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Remove warning when Valgrind is not used.
 	* autotest.at: Capture Valgrind log if possible,
 	not systematically.
