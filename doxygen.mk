@@ -53,10 +53,12 @@ CLEANFILES +=				\
 	Doxyfile			\
 	config.log
 
+DOXYGEN_DEPS = $(shell \
+	$(top_srcdir)/build-aux/doxygen/doxygen-deps.sh Doxyfile)
+
 # Targets rebuilt unconditionally.
 .PHONY: doc				\
 	html				\
-	doxygen-html 			\
 	install-doxygen-html		\
 	uninstall-doxygen-html
 
@@ -64,7 +66,7 @@ CLEANFILES +=				\
 doc: html
 html-local: doxygen-html
 
-doxygen-html: Doxyfile
+doxygen-html: Doxyfile $(DOXYGEN_DEPS)
 	@if test -d doxygen-html ; then \
 	  rm -rf doxygen-html/; 	\
 	fi

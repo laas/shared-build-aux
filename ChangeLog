@@ -1,3 +1,14 @@
+2009-10-03  Thomas Moulard  <thomas.moulard@gmail.com>
+
+	Handle Doxygen dependencies properly.
+	Warning: doxygen.mk is no more compatible with non-GNU make.
+	Please add -Wno-portability in when calling autoreconf to remove
+	warning and add a note specifying that GNU make is now required.
+
+	* doxygen.mk: Use doxygen-deps to deduce Doxygen
+	generated documentation dependencies.
+	* doxygen/doxygen-deps.sh: New.
+
 2009-09-25  Thomas Moulard  <thomas.moulard@gmail.com>
 
 	Fix path in documentation upload script.
