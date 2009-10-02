@@ -1,5 +1,10 @@
 2009-10-03  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Discuss enhancements of Doxygen rules.
+	* doxygen.mk: Here.
+
+2009-10-03  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Handle Doxygen dependencies properly.
 	Warning: doxygen.mk is no more compatible with non-GNU make.
 	Please add -Wno-portability in when calling autoreconf to remove

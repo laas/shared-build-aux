@@ -25,13 +25,36 @@
 # ------ #
 # README #
 # ------ #
-
+#
 # This mk file contains Doxygen generation rules.
 #
 # To use this mk file, include init.mk and this file into
 # your Makefile.am. You must also provide a Doxyfile.extra
 # that may be used to override default Doxygen configuration
 # defined in build-aux/doxygen/Doxyfile.
+#
+# WARNING: This file uses GNU Make extension!
+
+# ---- #
+# TODO #
+# ---- #
+#
+# It is possible to avoid using GNU Make extension by avoiding
+# the use of patterns in Doxyfile and listing sources files instead.
+# For instance, the project could generate a ``doxygen.dep'' file
+# in each build directory of directories containing source files
+# (see SOURCES variable). I.e.:
+# doxygen.dep: Makefile
+#	echo "DOXYGEN_INPUT = \"$(DOXYGEN_INPUT) $(SOURCES)\"" > $@
+#
+# ...and then it might be possible to include all these file in the Makefile.am
+# including this file. The INPUT field of Doxyfile would be then generated
+# automatically and it would be trivial to handle dependencies.
+#
+# P.S.: this is a general idea and not a perfect implementation, one problem
+# is that doxygen.dep file will have to contain absolute paths and not relative as
+# it is usually the case in Automake.
+
 
 # Distributed files.
 EXTRA_DIST += 						\
