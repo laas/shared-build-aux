@@ -1,5 +1,11 @@
 2009-10-06  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Fix stdout files smartly in autotest.at.
+	* autotest.at: Use ROBOPTIMCORE_VERSION
+	to know the current roboptim-core version.
+
+2009-10-06  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Export modversion in pkg.m4.
 	Warning: starting from this commit, pkg.m4 file does
 	not match usual /usr/share/aclocal.pkg.m4 anymore.
