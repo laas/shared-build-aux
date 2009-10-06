@@ -46,7 +46,8 @@ check-version:
 	 exit 42;							\
 	fi
 
-install-exec-hook install-data-hook: check-version
+install-exec-hook: check-version
+install-data-hook: check-version
 
 
 # Check that the version is up-to-date or regenerate if required.

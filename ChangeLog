@@ -1,5 +1,10 @@
 2009-10-06  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Fix Makefile rule.
+	* git-version-gen.mk: Here.
+
+2009-10-06  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Factorize Makefile rules concerning git-version-gen.
 	* git-version-gen.mk: New.
 
