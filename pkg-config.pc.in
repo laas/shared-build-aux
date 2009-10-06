@@ -4,6 +4,7 @@ libdir=@libdir@
 includedir=@includedir@
 datarootdir=@datarootdir@
 docdir=@datarootdir@/doc/@PACKAGE_TARNAME@
+doxygendocdir=@datarootdir@/doc/@PACKAGE_TARNAME@/doxygen-html
 
 Name: @PACKAGE@
 Description: @PKGCONFIG_DESCRIPTION@
