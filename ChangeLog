@@ -1,5 +1,10 @@
 2009-10-06  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Add missing semi-colon in Makefile.
+	* git-version-gen.mk: Here.
+
+2009-10-06  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Fix quoting in Makefile.
 	* git-version-gen.mk: Here.
 

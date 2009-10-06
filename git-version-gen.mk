@@ -41,7 +41,7 @@ $(top_srcdir)/.version:
 .PHONY: check-version
 check-version:
 	@if ! test x$(CURRENT_VERSION) = x$(VERSION); then		\
-	 echo "WARNING: Version string is out of date."			\
+	 echo "WARNING: Version string is out of date.";		\
 	 echo "         please run \`\`make _version'' and reinstall.";	\
 	 exit 42;							\
 	fi
