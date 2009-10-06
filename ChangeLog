@@ -1,3 +1,12 @@
+2009-10-06  Thomas Moulard  <thomas.moulard@gmail.com>
+
+	Export modversion in pkg.m4.
+	Warning: starting from this commit, pkg.m4 file does
+	not match usual /usr/share/aclocal.pkg.m4 anymore.
+
+	* pkg.m4: Add a variable indicating the version
+	of detected modules.
+
 2009-10-03  Thomas Moulard  <thomas.moulard@gmail.com>
 
 	Discuss enhancements of Doxygen rules.
