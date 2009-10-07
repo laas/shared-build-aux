@@ -1,5 +1,10 @@
 2009-10-07  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Add Doxyfile.extra to CLEANFILES in ``doxygen.mk''.
+	* doxygen.mk: Here.
+
+2009-10-07  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Distribute shell scripts.
 	* doxygen.mk,
 	* git-version-gen.mk: Here.

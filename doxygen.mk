@@ -75,6 +75,7 @@ EXTRA_DIST += 						\
 CLEANFILES +=				\
 	$(PACKAGE_TARNAME).doxytag 	\
 	Doxyfile			\
+	Doxyfile.extra			\
 	doxygen.log			\
 	config.log
 
