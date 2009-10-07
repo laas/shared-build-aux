@@ -60,6 +60,7 @@
 EXTRA_DIST += 						\
 	$(top_srcdir)/build-aux/doxygen/Doxyfile.in	\
 	$(top_srcdir)/build-aux/doxygen/doxygen.css	\
+	$(top_srcdir)/build-aux/doxygen/doxygen-deps.sh \
 	$(top_srcdir)/build-aux/doxygen/footer.html	\
 	$(top_srcdir)/build-aux/doxygen/header.html	\
 	$(top_srcdir)/build-aux/doxygen/header.tex	\

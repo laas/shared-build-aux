@@ -22,6 +22,9 @@
 # You should have received a copy of the GNU General Public License
 # along with roboptim.  If not, see <http://www.gnu.org/licenses/>.
 
+EXTRA_DIST += 						\
+	$(top_srcdir)/build-aux/git-version-gen
+
 # Update version files when needed.
 BUILT_SOURCES = $(top_srcdir)/.version
 

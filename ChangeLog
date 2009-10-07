@@ -1,5 +1,11 @@
 2009-10-07  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Distribute shell scripts.
+	* doxygen.mk,
+	* git-version-gen.mk: Here.
+
+2009-10-07  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Preprocess Doxyfile.extra, generate Doxygen log and be more strict.
 	* doxygen.mk: Preprocess Doxyfile.extra and generate a Doxygen log file.
 	* doxygen/Doxyfile.in: Make Doxygen more strict
