@@ -68,12 +68,13 @@ EXTRA_DIST += 						\
 	$(top_srcdir)/build-aux/doxygen/tabs.css
 
 EXTRA_DIST += 						\
-	Doxyfile.extra
+	Doxyfile.extra.in
 
 # Files to be removed by cleaning rule.
 CLEANFILES +=				\
 	$(PACKAGE_TARNAME).doxytag 	\
 	Doxyfile			\
+	doxygen.log			\
 	config.log
 
 DOXYGEN_DEPS = $(shell \
@@ -89,18 +90,23 @@ DOXYGEN_DEPS = $(shell \
 doc: html
 html-local: doxygen-html
 
-doxygen-html: Doxyfile $(DOXYGEN_DEPS)
+@PACKAGE_TARNAME@.doxytag: Doxyfile $(DOXYGEN_DEPS)
 	@if test -d doxygen-html ; then \
 	  rm -rf doxygen-html/; 	\
 	fi
 	@$(DOXYGEN) "$<"
 
-# Doxygen generation rule.
+doxygen-html: @PACKAGE_TARNAME@.doxytag
+
+# Doxygen generation rules.
+Doxyfile.extra: Doxyfile.extra.in
+	$(top_builddir)/config.status --file="$@":"$<"
+
 Doxyfile: $(top_srcdir)/build-aux/doxygen/Doxyfile.in \
-	  $(srcdir)/Doxyfile.extra
+	  Doxyfile.extra
 	@$(top_builddir)/config.status --file="$@":"$<" \
-	&& sed -i -e 's/^#.*//' -e '/^$$/d' "$@" &&	\
-	cat $(srcdir)/Doxyfile.extra >> "$@"
+	&& sed -i -e 's/^#.*//' -e '/^$$/d' "$@"	\
+	&& cat Doxyfile.extra >> "$@"
 
 # Clean rule.
 clean-local:
