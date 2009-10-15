@@ -1,5 +1,10 @@
 2009-10-15  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Add JRL dependency management m4 macro.
+	* jrl-pkg-config.m4: New.
+
+2009-10-15  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Add Kineo Makefile rules.
 	* kineo.mk: New.
 
