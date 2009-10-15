@@ -30,7 +30,7 @@
 
 # This m4 file can be used to search for Doxygen and its dependencies.
 
-m4_pattern_forbid([^JRL])
+m4_pattern_forbid([^JRL_])
 
 # JRL_PROG_DOXYGEN([REQUIRED_VERSION])
 # --------------------------------------------

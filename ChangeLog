@@ -1,5 +1,10 @@
 2009-10-15  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Fix doxygen.mk to avoid disallowing valid patterns.
+	* doxygen.m4: Only forbid ``^JRL_'' and not ``^JRL''.
+
+2009-10-15  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Add JRL dependency management m4 macro.
 	* jrl-pkg-config.m4: New.
 
