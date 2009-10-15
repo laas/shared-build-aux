@@ -52,9 +52,11 @@
 # automatically and it would be trivial to handle dependencies.
 #
 # P.S.: this is a general idea and not a perfect implementation, one problem
-# is that doxygen.dep file will have to contain absolute paths and not relative as
-# it is usually the case in Automake.
+# is that doxygen.dep file will have to contain absolute paths
+# and not relative as it is usually the case in Automake.
 
+# Define Doxygen directory.
+doxygendocdir = $(htmldir)/doxygen-html
 
 # Distributed files.
 EXTRA_DIST += 						\
@@ -82,21 +84,29 @@ CLEANFILES +=				\
 DOXYGEN_DEPS = $(shell \
 	$(top_srcdir)/build-aux/doxygen/doxygen-deps.sh Doxyfile)
 
+# Additional files that will be copied into doxygendocdir.
+DOXYGEN_EXTRA =
+
 # Targets rebuilt unconditionally.
 .PHONY: doc				\
 	html				\
 	install-doxygen-html		\
-	uninstall-doxygen-html
+	uninstall-doxygen-html		\
+	install-doxygen-html-local	\
+	uninstall-doxygen-html-local
 
 # Rules.
 doc: html
 html-local: doxygen-html
 
 @PACKAGE_TARNAME@.doxytag: Doxyfile $(DOXYGEN_DEPS)
-	@if test -d doxygen-html ; then \
-	  rm -rf doxygen-html/; 	\
+	@if test -d doxygen-html ; then 	\
+	  rm -rf doxygen-html/; 		\
 	fi
 	@$(DOXYGEN) "$<"
+	@if ! test "x$(DOXYGEN_DEPS)" = x; then	\
+	 cp -pr $(DOXYGEN_DEPS) doxygen-html;	\
+	fi
 
 doxygen-html: @PACKAGE_TARNAME@.doxytag
 
@@ -116,15 +126,15 @@ clean-local:
 
 # Install rules.
 install-data-local: install-doxygen-html
-install-doxygen-html: html-local
+install-doxygen-html: html-local install-doxygen-html-local
 	@if ! test -d "$(DESTDIR)$(htmldir)"; then \
 	  $(mkinstalldirs) "$(DESTDIR)$(htmldir)"; \
 	fi
 	@cp -pr doxygen-html/ "$(DESTDIR)$(htmldir)"
 	@$(INSTALL_DATA) $(PACKAGE_TARNAME).doxytag \
-	 "$(DESTDIR)$(htmldir)/doxygen-html"
+	 "$(DESTDIR)$(doxygendocdir)"
 
 # Uninstall rules.
 uninstall-local: uninstall-doxygen-html
-uninstall-doxygen-html:
+uninstall-doxygen-html: uninstall-doxygen-html-local
 	rm -rf "$(DESTDIR)$(htmldir)"
