@@ -45,15 +45,6 @@
 pkg_config_file = '@PACKAGE_TARNAME@.pc'
 pkgdir = "$(DESTDIR)$(libdir)/pkgconfig/"
 
-edit = $(SED) -e "s|@prefix\@|$(prefix)|"			\
-              -e 's,@exec_prefix\@,$(exec_prefix),g'		\
-              -e 's,@libdir\@,$(libdir),g'			\
-              -e 's,@includedir\@,$(includedir),g'		\
-              -e 's,@datarootdir\@,$(datarootdir),g'		\
-              -e 's,@PACKAGE\@,$(PACKAGE),g'			\
-              -e 's,@PACKAGE_TARNAME\@,$(PACKAGE_TARNAME),g'	\
-              -e 's,@VERSION\@,$(PACKAGE_VERSION),g'
-
 EXTRA_DIST += build-aux/pkg-config.pc.in
 CLEANFILES += $(pkg_config_file)
 

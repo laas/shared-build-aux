@@ -1,3 +1,8 @@
+2009-10-19  Thomas Moulard  <thomas.moulard@gmail.com>
+
+	Remove useless code.
+	* pkg-config.mk: Here.
+
 2009-10-15  Thomas Moulard  <thomas.moulard@gmail.com>
 
 	Add hooks to allow the copy of additional files in Doxygen directory.
