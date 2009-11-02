@@ -1,5 +1,11 @@
 2009-11-02  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Fix Doxygen generation rule.
+	* doxygen.mk: Doxygen extra distributed files should
+	be copied in doxygen-html, not Doxygen dependencies!
+
+2009-11-02  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Reduce Doxygen documentation dependencies.
 	* doxygen/doxygen-deps.sh: Sort and remove duplicated
 	dependencies.

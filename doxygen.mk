@@ -99,13 +99,13 @@ DOXYGEN_EXTRA =
 doc: html
 html-local: doxygen-html
 
-@PACKAGE_TARNAME@.doxytag: Doxyfile $(DOXYGEN_DEPS)
+@PACKAGE_TARNAME@.doxytag: Doxyfile $(DOXYGEN_DEPS) $(DOXYGEN_EXTRA)
 	@if test -d doxygen-html ; then 	\
 	  rm -rf doxygen-html/; 		\
 	fi
 	@$(DOXYGEN) "$<"
-	@if ! test "x$(DOXYGEN_DEPS)" = x; then	\
-	 cp -pr $(DOXYGEN_DEPS) doxygen-html;	\
+	@if ! test "x$(DOXYGEN_EXTRA)" = x; then	\
+	 cp -prf $(DOXYGEN_EXTRA) doxygen-html;		\
 	fi
 
 doxygen-html: @PACKAGE_TARNAME@.doxytag
@@ -130,7 +130,7 @@ install-doxygen-html: html-local install-doxygen-html-local
 	@if ! test -d "$(DESTDIR)$(htmldir)"; then \
 	  $(mkinstalldirs) "$(DESTDIR)$(htmldir)"; \
 	fi
-	@cp -pr doxygen-html/ "$(DESTDIR)$(htmldir)"
+	@cp -prf doxygen-html/ "$(DESTDIR)$(htmldir)"
 	@$(INSTALL_DATA) $(PACKAGE_TARNAME).doxytag \
 	 "$(DESTDIR)$(doxygendocdir)"
 
