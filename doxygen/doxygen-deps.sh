@@ -102,4 +102,4 @@ for input in $INPUT; do
 done
 
 # Display result.
-echo "$DEPENDENCIES"
+echo "$DEPENDENCIES" | sort | uniq

@@ -1,5 +1,11 @@
 2009-11-02  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Reduce Doxygen documentation dependencies.
+	* doxygen/doxygen-deps.sh: Sort and remove duplicated
+	dependencies.
+
+2009-11-02  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Add rules for Libtool and recursive documentation generation.
 	* doc-recursive.mk: New.
 	* libtool.mk: New.
