@@ -49,7 +49,12 @@ EXTRA_DIST += build-aux/pkg-config.pc.in
 CLEANFILES += $(pkg_config_file)
 
 # pkg-config generation.
-@PACKAGE_TARNAME@.pc: $(srcdir)/build-aux/pkg-config.pc.in
+# One has to make sure the ``.pc'' file is regenerated if:
+# - the package version
+# - or the compilation flags
+# are changed.
+@PACKAGE_TARNAME@.pc: $(srcdir)/build-aux/pkg-config.pc.in \
+		      $(top_builddir)/config.status
 	$(top_builddir)/config.status \
 	--file="$@":"$(srcdir)/build-aux/pkg-config.pc.in"
 
