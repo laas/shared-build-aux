@@ -82,5 +82,6 @@ rpm: install-rpm $(SPECFILE)
 	$(RPMBUILD) -bb $(SPECFILE)
 
 # Generate spec file.
-@PACKAGE_TARNAME@: @PACKAGE_TARNAME@.in
+@PACKAGE_TARNAME@.spec: @PACKAGE_TARNAME@.spec.in \
+			$(top_builddir)/config.status
 	$(top_builddir)/config.status --file="$@":"$<"
