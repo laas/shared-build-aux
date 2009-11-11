@@ -1,5 +1,11 @@
 2009-11-11  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Update rpm.mk to handle generated spec file.
+	* rpm.mk: Update copyright and handle generated
+	spec file.
+
+2009-11-11  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Fix git-version-gen rpmbuild incompatibility.
 	* git-version-gen: Replace dashes by points in version
 	number so that rpmbuild do not complain anymore that
