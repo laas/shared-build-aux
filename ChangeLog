@@ -1,3 +1,10 @@
+2009-11-11  Thomas Moulard  <thomas.moulard@gmail.com>
+
+	Fix git-version-gen rpmbuild incompatibility.
+	* git-version-gen: Replace dashes by points in version
+	number so that rpmbuild do not complain anymore that
+	generated version number is invalid.
+
 2009-11-03  Thomas Moulard  <thomas.moulard@gmail.com>
 
 	Regenerate the ``.pc'' file if package configuration changes.
