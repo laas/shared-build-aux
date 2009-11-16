@@ -1,5 +1,10 @@
 2009-11-16  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Fix announce-gen download link.
+	* announce-gen.mk: Fix download link.
+
+2009-11-16  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Fix release type detection in SourceForge rules.
 	* sf-doc.mk,
 	* sf-release.mk: Fix regexp.

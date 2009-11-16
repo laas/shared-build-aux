@@ -48,7 +48,7 @@ announce-mail: $(distdir).tar.gz
 		--release-type=$(RELEASE_TYPE)				\
 		--package-name='@PACKAGE_TARNAME@'			\
 		--current-version='@PACKAGE_VERSION@'			\
-		--url-directory='http://dl.sf.net/sourceforge'		\
+		--url-directory='http://dl.sourceforge.net/$(SF_PROJECT_ID)'\
 		--news=$(srcdir)/NEWS					\
 		--bootstrap-tools=autoconf,automake,libtool		\
 		--previous-version='FIXME'				\
