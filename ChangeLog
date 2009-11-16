@@ -1,3 +1,11 @@
+2009-11-16  Thomas Moulard  <thomas.moulard@gmail.com>
+
+	Add release related Makefile rules.
+	* announce-gen.mk: New.
+	* dist-sign.mk: Copy from sf.mk.
+	* sf-doc.mk: Copy from sf.mk.
+	* sf-release.mk: Rename from sf.mk.
+
 2009-11-11  Thomas Moulard  <thomas.moulard@gmail.com>
 
 	Fix spec file generation rule.

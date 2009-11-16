@@ -25,10 +25,32 @@
 # ------ #
 # README #
 # ------ #
+#
+# This mk file contains a rule for release announcement generation.
+#
+# To use this file, you must include first ``init.mk'' in your
+# local ``Makefile.am''.
+#
+# It also requires that ``make dist'' produces a ``.tar.gz'' file.
 
-# SourceForge related Makefile rules.
 
-# --- SourceForge upload script.
-# sf-upload.sh generation rule.
-sf-upload.sh: $(top_srcdir)/build-aux/sf-upload.sh.in
-	@$(top_builddir)/config.status --file="$@":"$<" && chmod a+x "$@"
+# Distributed files.
+EXTRA_DIST += 						\
+	$(top_srcdir)/build-aux/announce-gen
+
+IS_MAJOR=$$(echo '@PACKAGE_VERSION@'			\
+	| $(GREP) '^[:digit:]+\.[:digit:]+(\.[:digit:]+)$$')
+
+RELEASE_TYPE=$$(if test x = x$(IS_MAJOR); then echo alpha; else echo major; fi)
+
+announce-mail: $(distdir).tar.gz
+	$(top_srcdir)/build-aux/announce-gen				\
+		--release-type=$(RELEASE_TYPE)				\
+		--package-name='@PACKAGE_TARNAME@'			\
+		--current-version='@PACKAGE_VERSION@'			\
+		--url-directory='http://dl.sf.net/sourceforge'		\
+		--news=$(srcdir)/NEWS					\
+		--bootstrap-tools=autoconf,automake,libtool		\
+		--previous-version='FIXME'				\
+		--gpg-key-id='FIXME'					\
+	| tee "$@"
