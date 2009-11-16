@@ -31,7 +31,8 @@
 # Print version number if package is stable or an empty
 # string otherwise.
 SF_VERSION=`echo '@PACKAGE_VERSION@'			\
-	| $(GREP) '^[:digit:]+\.[:digit:]+(\.[:digit:]+)$$'`
+	| $(GREP) '^[0-9]\+.[0-9]\+\(.[0-9]\+\|\)'$$`
+
 
 # Generate shell script that allows documentation upload.
 sf-upload.sh: $(top_srcdir)/build-aux/sf-upload.sh.in
@@ -42,4 +43,5 @@ sf-upload.sh: $(top_srcdir)/build-aux/sf-upload.sh.in
 
 # Upload documentation to SourceForge.
 sf-doc-upload: sf-upload.sh doc
-	./sf-upload.sh VERSION=$(SF_VERSION)
+	export VERSION="$(SF_VERSION)";			\
+	./sf-upload.sh 

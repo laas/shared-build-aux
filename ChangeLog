@@ -1,5 +1,11 @@
 2009-11-16  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Fix release type detection in SourceForge rules.
+	* sf-doc.mk,
+	* sf-release.mk: Fix regexp.
+
+2009-11-16  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Add release related Makefile rules.
 	* announce-gen.mk: New.
 	* dist-sign.mk: Copy from sf.mk.

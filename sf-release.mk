@@ -29,7 +29,8 @@
 # Upload tarball to SourceForge server.
 
 SF_VERSION=`echo '@PACKAGE_VERSION@'			\
-	| $(GREP) '^[:digit:]+\.[:digit:]+(\.[:digit:]+)$$'`
+	| $(GREP) '^[0-9]\+.[0-9]\+\(.[0-9]\+\|\)'$$`
+
 
 SF_FRS_LOGIN=$$SF_USERNAME,$(SF_PROJECT_ID)
 SF_FRS_PATH=/home/frs/project/`echo $(SF_PROJECT_ID) | head -c1`/` echo $(SF_PROJECT_ID) | head -c2`/$(SF_PROJECT_ID)/@PACKAGE_TARNAME@/@PACKAGE_VERSION@/
