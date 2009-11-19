@@ -99,7 +99,9 @@ DOXYGEN_EXTRA =
 doc: html
 html-local: doxygen-html
 
-@PACKAGE_TARNAME@.doxytag: Doxyfile $(DOXYGEN_DEPS) $(DOXYGEN_EXTRA)
+@PACKAGE_TARNAME@.doxytag: Doxyfile 				\
+			   $(DOXYGEN_DEPS) $(DOXYGEN_EXTRA)	\
+			   $(top_builddir)/config.status
 	@if test -d doxygen-html ; then 	\
 	  rm -rf doxygen-html/; 		\
 	fi
@@ -111,10 +113,12 @@ html-local: doxygen-html
 doxygen-html: @PACKAGE_TARNAME@.doxytag
 
 # Doxygen generation rules.
-Doxyfile.extra: Doxyfile.extra.in
+Doxyfile.extra: Doxyfile.extra.in		\
+	        $(top_builddir)/config.status
 	$(top_builddir)/config.status --file="$@":"$<"
 
-Doxyfile: $(top_srcdir)/build-aux/doxygen/Doxyfile.in \
+Doxyfile: $(top_srcdir)/build-aux/doxygen/Doxyfile.in 	\
+	  $(top_builddir)/config.status			\
 	  Doxyfile.extra
 	@$(top_builddir)/config.status --file="$@":"$<" \
 	&& sed -i -e 's/^#.*//' -e '/^$$/d' "$@"	\

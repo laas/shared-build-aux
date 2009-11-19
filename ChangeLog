@@ -1,3 +1,10 @@
+2009-11-19  Thomas Moulard  <thomas.moulard@gmail.com>
+
+	Fix documentation dependencies.
+	* doxygen.mk: Make ``Doxyfile'' and ``Doxyfile.extra'' depends
+	on ``config.status'' (make sure these files are regenerated if
+	substituable values are changed such as the version number).
+
 2009-11-16  Thomas Moulard  <thomas.moulard@gmail.com>
 
 	Fix announce-gen download link.
