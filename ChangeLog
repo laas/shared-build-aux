@@ -1,3 +1,9 @@
+2009-12-02  Thomas Moulard  <thomas.moulard@gmail.com>
+
+	Make Autotest more robust.
+	* autotest.at: Handle test binaries in relative	directories.
+	* autotest.mk: Handle test suite in a non-standard directory.
+
 2009-11-19  Thomas Moulard  <thomas.moulard@gmail.com>
 
 	Fix documentation dependencies.
