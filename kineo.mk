@@ -52,13 +52,15 @@
 
 SUFFIXES += .kab
 
+KINEO_LIB_SUFFIX ?= -$(PACKAGE_VERSION)
+
 # Rules to generate Kineo license files from GNU Libtool libraries.
 # It deduces automatically where are the real shared libraries from
 # the Libtool file and call KineoAddonBuilder tool to sign it.
 
 # Shared library rule.
 .la.kab:
-	SOFILE=`echo ".libs/$<" | sed 's/.la$$/-$(PACKAGE_VERSION).so/'`; \
+	SOFILE=`echo ".libs/$<" | sed 's/.la$$/$(KINEO_LIB_SUFFIX).so/'`; \
 	KABSRCFILE=`echo "$$SOFILE" | sed 's/.so$$/.kab/'`;		  \
 	KABDSTFILE=`echo "$<" | sed 's/.la$$/.kab/'`; 			  \
 	LD_LIBRARY_PATH=$(KINEO_LIBDIR) 				  \
