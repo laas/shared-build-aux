@@ -1,3 +1,9 @@
+2010-01-11  Thomas Moulard  <thomas.moulard@gmail.com>
+
+	Add asciidoc related m4/mk files.
+	* asciidoc.m4: New.
+	* asciidoc.mk: New.
+
 2009-12-03  Thomas Moulard  <thomas.moulard@gmail.com>
 
 	Do not assume in Kineo rules the library prefix.
