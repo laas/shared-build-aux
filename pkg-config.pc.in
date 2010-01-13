@@ -3,8 +3,8 @@ exec_prefix=@exec_prefix@
 libdir=@libdir@
 includedir=@includedir@
 datarootdir=@datarootdir@
-docdir=@datarootdir@/doc/@PACKAGE_TARNAME@
-doxygendocdir=@datarootdir@/doc/@PACKAGE_TARNAME@/doxygen-html
+docdir=@docdir@
+doxygendocdir=@htmldir@/doxygen-html
 
 Name: @PACKAGE@
 Description: @PKGCONFIG_DESCRIPTION@
