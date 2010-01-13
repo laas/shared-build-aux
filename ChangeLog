@@ -1,5 +1,10 @@
 2010-01-13  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Add PACKAGE_TARNAME variable to pkgconfig file.
+	* pkg-config.pc.in: Here.
+
+2010-01-13  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Fix doxygendocdir value in pkg-config file.
 	* pkg-config.pc.in: Here.
 
