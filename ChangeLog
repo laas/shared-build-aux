@@ -1,3 +1,8 @@
+2010-01-20  Thomas Moulard  <thomas.moulard@gmail.com>
+
+	Add CORBA IDL generation rules.
+	* idl.mk: New.
+
 2010-01-13  Thomas Moulard  <thomas.moulard@gmail.com>
 
 	Add PACKAGE_TARNAME variable to pkgconfig file.
