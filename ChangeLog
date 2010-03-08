@@ -1,5 +1,10 @@
 2010-03-08  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Update boost.m4.
+	* boost.m4: Synchronizw with upstream.
+
+2010-03-08  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Update warnings.m4.
 	* warning.m4: Avoid erroneous concatenation in recent Autoconf versions.
 
