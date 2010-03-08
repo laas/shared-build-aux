@@ -1,6 +1,6 @@
-# Finding valid warning flags for the C Compiler.           -*-Autoconf-*-
+# Finding valid warning flags for the C and C++ Compilers.  -*-Autoconf-*-
 #
-# Copyright (C) 2003 Free Software Foundation, Inc.
+# Copyright (C) 2003, 2006, 2009 Free Software Foundation, Inc.
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
 # 02111-1307  USA
 
-# serial 2
+# serial 3
 
 # AC_COMPILE_STDERR_IFELSE([PROGRAM],
 #                          [ACTION-IF-FOUND], [ACTION-IF-NOT-FOUND])
@@ -31,7 +31,7 @@ AS_IF([_AC_EVAL_STDERR($ac_compile) &&
 	 AC_TRY_COMMAND([test -s conftest.$ac_objext])],
       [$2],
       [_AC_MSG_LOG_CONFTEST
-m4_ifvaln([$3],[$3])dnl])dnl
+m4_ifvaln([$3],[$3])dnl])
 rm -f conftest.$ac_objext m4_ifval([$1], [conftest.$ac_ext])[]dnl
 ])# AC_COMPILE_STDERR_IFELSE
 
@@ -78,8 +78,8 @@ AC_COMPILE_STDERR_IFELSE([AC_LANG_PROGRAM],
    fi])
 JRL_COMPILER_FLAGS_NAME=$ac_save_[]JRL_COMPILER_FLAGS_NAME
 ])
-AS_IF([test AS_VAR_GET(ac_Option) = yes], [$2], [$3])[]dnl
-AS_VAR_PUSHDEF([ac_Option])dnl
+AS_VAR_IF([ac_Option], [yes], [$2], [$3])dnl
+AS_VAR_POPDEF([ac_Option])dnl
 ])# JRL_COMPILER_OPTION_IF
 
 
@@ -99,7 +99,10 @@ AC_DEFUN([JRL_CXX_WARNINGS],
 m4_foreach([AC_Option], [$1],
     [JRL_COMPILER_OPTION_IF(AC_Option,
            [WARNING_CXXFLAGS="$WARNING_CXXFLAGS AC_Option"
-            JRL_COMPILER_FLAGS_NAME="$ac_save_compiler_flags $WARNING_FLAGS"])])
+            JRL_COMPILER_FLAGS_NAME="$ac_save_compiler_flags $WARNING_FLAGS"])
+dnl Newlines inserted on purpose, to avoid erroneous concatenations.
+
+])
 JRL_COMPILER_FLAGS_NAME=$ac_save_compiler_flags
 AC_SUBST([WARNING_CXXFLAGS])
 ])# JRL_CXX_WARNINGS(OPTIONS)

@@ -1,3 +1,8 @@
+2010-03-08  Thomas Moulard  <thomas.moulard@gmail.com>
+
+	Update warnings.m4.
+	* warning.m4: Avoid erroneous concatenation in recent Autoconf versions.
+
 2010-01-20  Thomas Moulard  <thomas.moulard@gmail.com>
 
 	Add CORBA IDL generation rules.
