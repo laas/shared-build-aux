@@ -591,6 +591,11 @@ AC_DEFUN([BOOST_NUMERIC_CONVERSION],
 [BOOST_FIND_HEADER([boost/numeric/conversion/converter.hpp])
 ])# BOOST_NUMERIC_CONVERSION
 
+# BOOST_MPL()
+# --------------
+# Look for Boost.MPL
+AC_DEFUN([BOOST_MPL],
+[BOOST_FIND_HEADER([boost/mpl/void_fwd.hpp])])
 
 # BOOST_OPTIONAL()
 # ----------------

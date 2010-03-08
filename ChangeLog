@@ -1,5 +1,10 @@
 2010-03-08  Thomas Moulard  <thomas.moulard@gmail.com>
 
+	Re-add MPL checks.
+	* boost.m4: Here.
+
+2010-03-08  Thomas Moulard  <thomas.moulard@gmail.com>
+
 	Update boost.m4.
 	* boost.m4: Synchronizw with upstream.
 
