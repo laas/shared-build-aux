@@ -1,3 +1,8 @@
+2010-03-15  Thomas Moulard  <thomas.moulard@gmail.com>
+
+	Search for generated headers.
+	* init.mk: Here.
+
 2010-03-08  Thomas Moulard  <thomas.moulard@gmail.com>
 
 	Re-add MPL checks.
