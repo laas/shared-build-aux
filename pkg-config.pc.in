@@ -16,3 +16,5 @@ Conflicts: @PKGCONFIG_CONFLICTS@
 Libs: -L${libdir} @PKGCONFIG_LIBS@
 Libs.private:
 Cflags: -I${includedir} @PKGCONFIG_CFLAGS@
+
+@PKGCONFIG_EXTRA@
