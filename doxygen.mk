@@ -107,6 +107,7 @@ html-local: doxygen-html
 	fi
 	@$(DOXYGEN) "$<"
 	@if ! test "x$(DOXYGEN_EXTRA)" = x; then	\
+	 chmod u+w $(DOXYGEN_EXTRA);		\
 	 cp -prf $(DOXYGEN_EXTRA) doxygen-html;		\
 	fi
 
